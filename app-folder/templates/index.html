@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>We appreciate your feedback! | JITESH</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../static/logo.png" class="logo">
+
+        {% if message %}
+        <p class="message">{{ message | safe }}</p>
+        {% endif %}
+        <!--@todo-->
+        <!--
+            The method attribute specifies how to send form-data (the form-data is sent to the page specified in the action attribute).
+            The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+        -->
+        <form action="/submit" method="POST">
+            <!--Text Edit Field-->
+            <div class="form-group">
+                <h2>User Name</h2>
+                <input type="text" name="user" placeholder="Input your name">
+            </div>
+
+            <!--Drop-down-->
+            <div class="form-group" id ="drop-down">
+                <h3>Trainers</h3>
+                <select name="trainers">
+                    <option value=""> Select Trainer - </option>
+                    <option value="Eros"> Eros </option>
+                    <option value="Jitesh"> Jitesh </option>
+                    <option value="lasso"> lasso </option>
+                    <option value="Ted"> Ted </option>
+                </select>
+            </div>
+
+            <!--Radio Buttons-->
+            <div class="form-group" id="radio-buttons">
+                <h3>Please rate your trainers</h3>
+                <input type="radio" name="rating" value="1"/> 1
+                <input type="radio" name="rating" value="2"/> 2
+                <input type="radio" name="rating" value="3"/> 3
+                <input type="radio" name="rating" value="4"/> 4
+                <input type="radio" name="rating" value="5"/> 5
+                <input type="radio" name="rating" value="6"/> 6
+                <input type="radio" name="rating" value="7"/> 7
+                <input type="radio" name="rating" value="8"/> 8
+                <input type="radio" name="rating" value="9"/> 9
+                <input type="radio" name="rating" value="10"/> 10
+            </div>
+
+            <div class="form-group" id="comments">
+                <h3> Leave a comment about your learning experience </h3>
+                <textarea name="comments"
+                    id=""
+                    cols="30"
+                    rows="5"
+                    placeholders="Tell us what you liked or disliked">
+                </textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="btn"/>
+        </form>
+    </div>
+</body>
+</html>

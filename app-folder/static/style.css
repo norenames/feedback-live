@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+}
+
+body {
+    background-color: antiquewhite;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 650px;
+    margin: 1rem auto;
+    overflow: auto;
+    padding: 0 2rem;
+}
+
+img {
+    width: 150%;
+}
+
+.logo{
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+input[type='text'],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 2.5px rgb(63, 62, 62) solid;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: darkseagreen;
+    color: rgb(255, 85, 24);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1rem;
+    font-weight: 3000;
+}
+
+.form-group {
+    background-color: rgba(192, 192, 192, 0.54);
+}
+
+.form-group h2{
+    color: rgba(242, 139, 219, 0.779);
+}
+
+#drop-down {
+    background-color: darkgray;
+}
+
+#radio-buttons{
+    background-color: rgb(248, 207, 145);
+}
+
+#commets {
+    background-color: honeydew;
+}
